@@ -1,0 +1,92 @@
+<!Doctype html>
+  <html lang="en-US">
+    <head>
+	  <title>Location</title>
+	  <style>
+	    table{
+		border-collapse: collapse;
+		width:100%;
+		}
+		
+	    tr,th,td {
+		border: 2px solid black;
+		text-align:center;
+		}
+		
+		tr:nth-child(even){
+		background-color: #dddddd;
+		}
+		
+		ul{
+		list-style-type:none;
+		margin:0;
+		background-color: red;
+		overflow:hidden;
+		}
+		
+		li{
+		float:left;
+		}
+		
+		li a{
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 16px;
+		text-decoration: none;
+		}
+		
+	  </style>
+	</head>
+	<body style="background-color:rgba(255,165,0,0.3);">
+	  <ul>
+	    <li><a href="C01.htm">HOME</a></li>
+		<li><a href="#news">NEWS</a></li>
+		<li><a href="#about">ABOUT</a></li>
+	  </ul>
+	  <h1>Our Offices</h1>
+	  <table>
+	    <caption>Office details</caption>
+	    <tr>
+		  <th>Office</th>
+		  <th>Location</th>
+		</tr>
+		<tr>
+		  <td>ABC</td>
+		  <td>India</td>
+		</tr>
+		<tr>
+		  <td>XYZ</td>
+		  <td>India</td>
+		</tr>
+		<tr>
+		  <td>JKL</td>
+		  <td>India</td>
+		</tr>
+	  </table>
+	  <h1 id="myHeader">Welcome!</h1>
+      <button onclick="displayResult()">Change text</button>
+	  <button onclick="oldresult()">Old text</button>
+	  <h3>Home page:</h3>
+	  <iframe src="C01.htm" name="iframe_a" height="300" width="100%" title="searchframe"></iframe>
+	  <p><a href="Calls.htm" target="iframe_a">Call Us</a></p>
+	  
+	  <code>
+      Code<br/>
+      x = 5;<br>
+      y = 6;<br>
+      z = x + y;
+      </code>
+	  
+	  
+	  
+      <script>
+      function displayResult() {
+      document.getElementById("myHeader").innerHTML = "Have a nice day!";
+      }
+	  function oldresult()  {
+	  document.getElementById("myHeader").innerHTML ="Welcome!";
+	  }
+      </script>
+	</body>
+  </html>

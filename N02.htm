@@ -1,0 +1,205 @@
+<!Doctype html>
+  <html lang="en-US">
+    <head>
+	  <title>Javascript Example</title>
+	</head>
+	<body>
+	  <p id="a01"></p>
+	  <p id="a02"></p>
+	  <p id="a03"></p>	  
+	  <p id="a04"></p>	 
+      <p id="a05"></p>	  
+	  <p id="a06"></p>
+	  <p id="a07"></p>
+	  <p id="a08"></p>
+	  <button onclick="this.innerHTML=Date()">What time it is?</button>
+	  <p id="a09"></p>	  
+	  <p id="a10"></p>
+	  <p id="a11"></p>
+	  <button onclick="updatedpop()">Pop</button> 
+	  <button onclick="updatedpush()">Push</button>
+	  <p id="a12"></p>
+	  <p id="a13"></p>
+	  <p id="a14"></p>
+	  <p id="a15"></p>
+	  <p id="a16"></p>
+	  <p id="a17"></p>
+	  <p id="a18"></p>
+	  <p id="a19"></p>
+	  <p id="a20"></p>
+	  <p id="a21"></p>
+	  <input id="a22" type="text">
+	  <button type="button" onclick="errorhandle()">Try this</button>
+	  <p id="a23"></p>
+	  
+	  <p id="changes">Please visit Microsoft and Microsoft!</p>
+	  <button onclick="changeit()">Try this now</button>
+	  
+	  <script>
+	  var x = 1+2+"3";
+	  document.getElementById("a01").innerHTML= x;
+	  
+	  var text1="This is ";
+	  text1+="nice day";
+	  document.getElementById("a02").innerHTML= text1;
+	  
+	  var j=5,k=5,l=7;
+	  document.getElementById('a03').innerHTML=(j==k)+"</br>"+(k==l);
+	  
+	  var fruits=["apple","mango","banana"];
+	  document.getElementById('a04').innerHTML= fruits[0];
+	  
+	  var person = { firstname: "Rishabh",
+	    lastname: "Sharma",
+		age: 23,
+		eyecolor: "black"
+		};
+		
+	   document.getElementById('a05').innerHTML =
+	   person.firstname + " is " + person.age + " years old.";
+	   
+	   function example(p1,p2) {
+	   
+	     return p1*p2;
+	   }
+	   document.getElementById('a06').innerHTML = example(3,9);
+	   
+	   function toC(f){
+	     return (5/9) * (f-32);
+	   }
+	   document.getElementById("a07").innerHTML = toC;
+	     
+	   var people = {
+	     fn: "Rishabh",
+		 ln: "Sharma",
+		 fullname: function() {
+		   return this.fn +" "+ this.ln;
+		 } 
+	   };
+	   document.getElementById('a08').innerHTML = people.fullname();
+	   
+	   
+	   
+	   var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	   var sln = txt.length;
+	   document.getElementById('a09').innerHTML = sln;
+	   document.getElementById('a10').innerHTML = "Hello \
+	   Dolly!";
+	   
+	   var test1 ="Appropriate test for string slice";
+	   var result1 = test1.slice(4,8);
+	   document.getElementById('a11').innerHTML = result1;
+	   
+	   function changeit() {
+	     var xyz = document.getElementById('changes').innerHTML;
+		 var chng = xyz.replace("Microsoft","W3Schools");
+		 document.getElementById("changes").innerHTML = chng;
+	   }
+	   
+	   var fruits = ["Banana", "Orange", "Apple"];
+	   document.getElementById('a12').innerHTML = fruits;
+	   fruits.shift();
+	   document.getElementById('a15').innerHTML = fruits;
+	   
+	   function updatedpop() {
+	   fruits.pop();
+	   document.getElementById('a13').innerHTML = fruits;
+	   }
+	   function updatedpush() {
+	   fruits.push("Kiwi");
+	   document.getElementById('a14').innerHTML = fruits;
+	   }
+	   var displayvalue = "";
+	   var arr = [24,36,25,33,39];
+	   arr.forEach(fefunction);
+	   
+	   function fefunction(value, index, array) {
+	     displayvalue = displayvalue + value + "<br>";
+	   }
+	   document.getElementById("a16").innerHTML = displayvalue;
+	    
+	   var arr1 = arr.map(mpfunction);
+	   function mpfunction (value, index, array) {
+	     return value*2;
+	   }
+	   document.getElementById("a17").innerHTML = arr1;
+	   
+	   var allover18 = arr.every(checkfun);
+	   function checkfun(value, index, array) {
+	     return value > 18;
+	   }
+	   document.getElementById("a18").innerHTML = "Result is "+ allover18;
+	   
+	   var today, someday, text;
+	   today = new Date();
+	   someday= new Date();
+	   someday.setFullYear(2100, 0, 14);
+	   
+	   if(someday> today) {
+	    text ="Today is before January 14, 2100.";
+		} else {
+		 text ="Today is after January 14, 2100.";
+		}
+		document.getElementById("a19").innerHTML =text;
+
+		var cars = ["BMW", "Volvo", "Saab", "Ford"];
+        var i = 0;
+        var text = "";
+        while (cars[i]) {
+        text += cars[i] + "<br>";
+        i++;
+        }
+        document.getElementById("a20").innerHTML = text;
+		
+		var myDate = new Date();
+		document.getElementById("a21").innerHTML = isDate(myDate);
+		
+		function isDate(myDate) {
+		  return myDate.constructor.toString().indexOf("Date") > -1;
+		}
+		
+		function errorhandle() {
+		var message, x;
+		message = document.getElementById("a23");
+		message.innerHTML = "";
+		x = document.getElementById("a22").value;
+		try {
+		  if(x =="") throw "empty";
+		  if(isNaN(x)) throw "not a number";
+		  x = Number(x);
+		  if(x<5) throw "too low";
+		  if(x>10) throw "too high";
+		}
+		catch(err) {
+		  message.innerHTML = "Input is " + err; 
+		}
+		}
+		
+		let age = 7;
+		console.log('Tommy is' +age+'years old.');
+		console.log(`Tommy is ${age} years old.`);
+		
+		
+		const promise = new Promise((resolve, reject) => {  
+  setTimeout(() => {
+    resolve('*');
+  }, 1000);
+});
+
+const twoStars = (star) => {  
+  return (star + star);
+};
+
+const oneDot = (star) => {  
+  return (star + '.');
+};
+
+const print = (val) => {
+  console.log(val);
+};
+
+// Chaining them all together
+promise.then(twoStars).then(oneDot).then(print);
+	  </script>
+	</body>
+  </html>

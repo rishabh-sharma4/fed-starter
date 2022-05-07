@@ -1,0 +1,18 @@
+body{
+	background-color:blue;
+	text-align:center;
+}
+
+h1{
+	color:white;
+	text-align:center;
+	font-size:300%;
+}
+
+.done {
+	background:green !important;
+	color: yellow;
+}
+.delete {
+	display:none;
+}

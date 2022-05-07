@@ -1,0 +1,50 @@
+<!Doctype html>
+  <html>
+    <head>
+	  <meta http-equiv="refresh" content="60">
+	</head>
+    <body>
+	  <h2>What JS can do?</h2>
+	  <p id="demo"></p>
+	  <button onclick="myfunction()">Change text</button>
+	  <button onclick="window.print()">Print this page</button>
+	  <p>lets do a calculation in JS</p>
+	  <p id="aab"></p>
+	  
+	  <p>Click on below button to see the function results</p>
+	  <button onclick="datafunction()">Click and See</button>
+	  <p id="a01"></p>
+	  <p id="a02"></p>
+	  <p id="a03"></p>
+	  <p id="a04"></p>
+	  
+	  <script>
+	    document.getElementById("demo").innerHTML="My First JavaScript";
+		function myfunction() {
+		document.getElementById('demo').innerHTML="Text is now changed";
+		}
+		document.write(5+6);
+		window.alert("Welcome");
+		console.log(5+6);
+		
+		
+		var x,y,z;
+		x=5;
+		y=8;
+		z=x+y;
+		document.getElementById("aab").innerHTML=
+		"The value of z is "+ z +".";
+		
+		function datafunction() {
+		  document.getElementById('a01').innerHTML="First Statement";
+		  document.getElementById('a02').innerHTML="Second Statement";
+		}
+		
+		var cat;
+		document.getElementById('a03').innerHTML=cat;
+		
+		var val= 1+2+"3";
+		document.getElementById('a04').innerHTML=val;
+	  </script>
+	</body>
+  </html>

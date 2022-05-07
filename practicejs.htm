@@ -1,0 +1,451 @@
+<!Doctype html>
+  <html>
+    <head>
+	  <title> JS PRACTICE </title>
+	</head>
+	<body>
+	  <p> Lets practice JAVASCRIPT </p>
+	  
+	  <script>
+	  //console.log() example
+	    console.log("lets begin");
+		
+	  //string example-- use "" or ''
+		let single = 'My first string in JS';
+		let double = "My first string in JS";
+		console.log(single + "\n" + double);
+		
+	  //number example
+	    let amount = 6;
+	    let price = 4.99;
+	    console.log(amount + "\n" + price);
+	  
+	  //boolean example
+	    let ans = true;
+		console.log(ans);
+		
+	  //null example-- it represents intentional absence of value
+	    var x = null;
+		console.log(x);
+		
+	  //Arithmetic operators
+	    var x = 5 + 5;
+		console.log(x);
+		
+	  //string length property
+	    let message = 'Hello Javascript';
+		console.log(message.length);
+	  //alternative to check length
+		console.log('check it'.length);
+	  
+	  //accessing a method of an instance
+	    var x = Math.random();
+		console.log(x);
+		
+	  /*math library
+	    using Math.floor()-- gives nearest integer less than number*/
+	    var x = Math.floor(Math.random());
+		console.log(x);
+		
+	  //undefined value example
+	    var a;
+		console.log(a);
+		
+	  // assignment operators
+	    let number = 100;
+		number = number + 10;
+		number +=10;
+		console.log(number);
+		
+	  // string concatenation
+	    let fname = 'Rishabh';
+		let lname = 'Sharma';
+		let fullname = 'This is my complete name: ' + fname + lname;
+		console.log(fullname);
+		
+	  // string interpolation
+	    let age = 7;
+		console.log(`Tommy is ${age} years old.`);
+		console.log(`Rishabh is ${age+16} years old.`);
+	
+	  // Conditional statement--- if statement
+	    const mailSent = true;
+		if (mailSent) {
+		  console.log('Email sent successfully');
+		}
+	
+	  //logicaL NOT
+	    let hardwork = true;
+		let failure = !hardwork;
+		console.log(`failure ${failure}`);
+		
+	  //switch statement
+	    const food = 'salad';
+		
+		switch (food) {
+		  case 'pizza':
+		    console.log('Enjoy your pizza');
+			break;
+		  case 'burger':
+		    console.log('Enjoy your burger');
+			break;
+		  default:
+		    console.log('Enjoy your salad');
+		}
+	  
+	  //ternary operators
+	    let rate = 12;
+		let day = "Tuesday";
+		day ==='Monday' ? rate -= 2 : rate +=2;
+		console.log(rate);
+		
+	  // function example
+	  //defining function
+	    function sum(num1, num2) {
+		  return num1 + num2;
+		}
+	  // calling the function
+		console.log(sum(2, 4));
+	  
+	  //interpolation method
+	    function sayHello(name) {
+		  return `Hello, ${name}!`;
+		}
+		console.log(sayHello('Rishabh'));
+		
+	  //function returns undefined if no value is returned
+	  function letsCheck(name) {
+	  }
+	  console.log(letsCheck('Rishabh'));
+	  
+	  //anonymous function do not have name property
+	    const rocketToMars = function() {
+		  return 'BOOM!';
+		}
+		console.log(rocketToMars());
+	  
+      //arrow function with two arguments
+        const sumtotal = (firstNumber, secondNumber) => {
+          return firstNumber + secondNumber;
+        };
+        console.log(sumtotal(3,5));	
+		
+	  //arrow function with one arguments
+	    const sumtotal1= size => {
+		  console.log(`My shoes size is ${size}`);
+		};
+		sumtotal1(9);
+	  
+	  //arrow function with no arguments
+	    const printSome = () => {
+		  console.log('arrow function without arguments');
+        }		
+		printSome();
+		
+	  //arrow function with single expression doesn't need return keyword
+	    const multiply = (a, b) => a*b;
+		  console.log(multiply(2,4));
+		
+	  // Global variable example
+	    const color = 'blue';
+		function printColor() {
+		  console.log(color);
+		}
+		printColor();
+		
+	  // Array containing numbers
+	    const numberArray = [3, 6, 12, 24];
+		  console.log(numberArray);
+	  // Array containing different data types
+	    const mixedArray = [1, 'Pizza', false];
+		  console.log(mixedArray);
+	  // Access array elements using indexes
+	    const myArray = [100, 200, 300];
+		  console.log(myArray[0]);
+		  console.log(myArray[1]);
+		  console.log(myArray[2]);
+	  // Check array length
+	    const number1 = [1, 2, 3, 3];
+		  console.log(`Array lenth is ${number1.length}`);
+	  // Pushing element in array
+	    const cart = ['apple', 'mango'];
+		  console.log(`The element at cart[2] before ${cart[2]}`);
+		  cart.push('grapes');
+		  console.log(`The last array element now ${cart[2]}`);
+	  // Pushing multiple elements in the array
+	    const number2 = [1, 2];
+		  number2.push(3, 4, 5);
+		  console.log(number2);
+	  // Pop the elements from array
+	    const cart1 = ['tomato', 'onion', 'cheese'];
+		const popedData = cart1.pop();
+		  console.log(popedData);
+	  // Arrays are mutable
+	    const names = ['Alice', 'Bob'];
+		names.push('Builder');
+		  console.log(names);
+	  // Reverse loop
+	    const reverseloop = [3, 6, 9];
+		for(let i = reverseloop.length - 1; i >=0; i -= 1)
+		{
+		  console.log(`${i}. ${reverseloop[i]}`);
+		}
+	  // Looping through arrays
+	    for(let i = 0; i < reverseloop.length; i++) {
+		  console.log(reverseloop[i]);
+		}
+		
+	  //While loop
+	    let con = 5;
+		while(con >= 0) {
+		  console.log(`Loop iteration ${con}`);
+		  con--;
+		}
+	  //Do while loop
+	    let val = 0;
+		let abc = 0;
+		do {
+		 
+		  val = val + abc;
+		  console.log(val);
+		  abc++;
+		}while(abc < 4);
+		
+	  /*A “higher-order function” is a function that accepts functions 
+	  as parameters and/or returns a function.*/
+	  
+	  /*Callback Functions
+	  In JavaScript, a callback function is a function that is passed 
+	  into another function as an argument. This function can then be 
+	  invoked during the execution of that higher order function 
+	  (that it is an argument of). */
+	  
+	  const isEven = (n) => {
+	    return n % 2 == 0;
+	  }
+	  
+	  let printMsg = (evenFunc, num) => {
+	    const isNumEven =evenFunc(num);
+		console.log(`Number ${num} is an even number : ${isNumEven}.`)
+	  }
+		
+	  printMsg(isEven,4);
+	  
+	  // Array method for each
+	    const integers = [28, 55, 44, 32];
+		integers.forEach( integers => {
+		  console.log(integers);
+		  });
+	  // Array method map
+	    const finalParticipants = ['Taylor', 'Ricky', 'Gayle', 'Sachin',
+		 'Dhoni'];
+		const announcements = finalParticipants.map(member =>{
+		  return member + ' joined the contest. ';
+		});
+		console.log(announcements);
+      // Array filter method
+	    const randomNumbers = [4, 11, 42, 14, 39];
+		const filteredArray = randomNumbers.filter(n => {
+		  return n>5;
+		});
+		  console.log(filteredArray);
+	  // Array reduced method
+	    const arrayOfNumbers = [1, 2, 3, 4];
+		const sums = arrayOfNumbers.reduce((accumulator, 
+		currentValue) => {
+		 return accumulator + currentValue;
+		});
+		console.log(sums);
+		
+	  //accessing object properties
+	    const apple = {
+		  color: 'Green',
+          price: {
+		    bulk: '$3/kg',
+			smallQty: '$4/kg'
+          }		  
+		};
+		console.log(apple.color);
+		console.log(apple.price.bulk);
+      //accessing non-existent JavaScript properties
+	    const classElection = {
+		  date: 'January 12'
+		};
+		console.log(classElection.place);
+	  //javaScript object properties are mutable
+	    const student = {
+		  name: 'Rishabh',
+		  score: 100,
+		  grade: 'A',
+		}
+		console.log(student);
+		delete student.score;
+		student.grade = 'F';
+		console.log(student);
+	  // for in loop
+	    const mobile = {
+		  brand: 'Samsung',
+		  model: 'Galaxy M30s',
+		};
+		for (let key in mobile) {
+		  console.log(`${key}: ${mobile[key]}`);
+		}
+	  // javaScript passing object as arguments
+		const origNum = 8;
+		const origObj = {color: 'blue'};
+		
+		const changeItUp = (num, obj) => {
+		  num = 7;
+		  obj.color = 'red';
+		};
+		changeItUp(origNum, origObj);
+	  // Will output 8 since integers are passed by value.
+		console.log(origNum);
+	  // Will output 'red' since objects are passed 
+      // by reference and are therefore mutable.
+		console.log(origObj.color);
+		
+	  // JS object methods
+	    const engine ={
+		  start(adverb) { 
+		    console.log(`The engine starts up ${adverb}..`);
+		  },
+		  sputter: () => {
+		    console.log('The engine sputters...');
+		  },
+		};
+		engine.start('noisily');
+		engine.sputter();
+	  // traverse an array
+        const arraycheck = [2, 4, 7];
+		for(let i = 0; i < arraycheck.length; i++) {
+		  console.log(arraycheck[i]);
+		}
+	  //  destruct assignment shorthand 
+	    const vars = {
+		  possibleNos: '43,252,003,274,489,856,000',
+		  invented: '1974',
+		  largestCube: '17x17x17'
+		};
+		const {possibleNos, invented, largestCube} = vars;
+		console.log(possibleNos);
+		console.log(invented);
+		console.log(largestCube);
+	  // shorthand property for object creation
+	    const activity = 'Surfing';
+		const beach = {activity};
+		console.log(beach);
+	
+	  //this keyword
+	    const cat = {
+		  name: 'Rishabh Sharma',
+		  age: 8,
+		  whatName() {
+		    return this.name;
+		  }
+		};
+		console.log(cat.whatName());
+	  //this keyword
+	    const restaurant = {
+		  numCustomers: 45,
+		  seatCapacity: 100,
+		  availableSeats() {
+		    return this.seatCapacity - this.numCustomers;
+		  }
+		};
+		console.log(restaurant.availableSeats());
+		
+		const myCat = {
+		  _name: 'Snickers',
+		  get name() {
+		    return this._name;
+		  },
+		  set name(newName) {
+		    if(typeof newName === 'string' && newName.length > 0) {
+			  this._name = newName;
+			  }
+			else {
+			  console.log("Error: name must be a non-empty string");
+			}
+		  }
+		}
+		console.log(myCat.name);//display name using get
+		myCat.name = 'Cadbury';// set name using set
+		console.log(myCat._name);
+		
+	  //A JavaScript function that returns an object is known 
+	 //as a factory function
+	   const Btech = (name, age, country) => {
+	     return{
+		   name: name,
+		   age: age,
+		   country: country,
+		   years() { 
+		     console.log('I am in 1st year');
+		   }  
+		 };
+	   };
+	   const result = Btech('Rishabh', 23, 'India');
+	   console.log(result.name +" "+ result.age +" "+ result.country);
+	   result.years();
+	   
+	  //Classes
+	    class Dog {
+		  constructor(name) {
+		    this._name = name;
+		  }
+		  introduce() {
+		    console.log('This is ' + this._name + '!');
+		  }
+		  static bark() {
+		    console.log('Woof!');
+		  }
+		}
+		const myDog = new Dog('Buster');
+		myDog.introduce();
+		Dog.bark();
+	  // classes and inheritance
+	    class Song {
+		  constructor(info) {
+		    this.releaseDate = info.releaseDate;
+			this.genre = info.genre;
+		  }
+		}
+		class Song1 extends Song {
+		  constructor(info1) {
+		    super(info1);
+			this.artist = info1.artist;
+		  }
+		}
+		const songDetail = new Song1({
+		  artist: 'Arijit Singh',
+		  releaseDate: '14Aug',
+		  genre: 'Pop'
+		  });
+		console.log('Artist: '+ songDetail.artist +
+		' Release Date: '+ songDetail.releaseDate + ' Genre: '+ 
+		songDetail.genre);
+	  // States of JavaScript promise
+	    const promise = new Promise((resolve,reject) => {
+		  const res = true;
+		  if(res) {
+		    resolve('Resolved!');
+		  }
+		  else {
+		    reject(Error('Error'));
+		  }  
+		});
+		
+		promise.then((res) => console.log(res), (err) => alert(err));
+		
+	  //setTimeout
+	  const loginAlert = () =>{
+      alert('Login');
+      };
+
+      setTimeout(loginAlert, 6000);
+	  
+	  
+	  </script>
+	</body>
+  </html>

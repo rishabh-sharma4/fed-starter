@@ -1,0 +1,93 @@
+<!Doctype html>
+  <html lang="en-US">
+    <head>
+	  <meta charset="UTF-8">
+	  <meta name="description" content="CSS practice">
+	  <meta name="author" content="Rishabh Sharma">
+	  <meta http-equiv="refresh" content="30">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Medical Help</title>
+	  <link rel="stylesheet" href="pc01.css">
+	  <style>
+	    body {background-color: rgba(255,165,0,0.3);}
+	  </style>
+	  <script>
+	    function myfunction(){
+		alert("Welcome to medical help!");
+		}
+		function light(no)  {
+		var pic;
+		if (no==1) {
+		  pic="bulboff.gif"
+		  }else {
+		  pic="bulbon.gif"
+		  }
+		  document.getElementById('mypic').src = pic;
+		}
+	  </script>
+	</head>
+	<body>
+	  <img src="logo.jpg" alt="logo" width="100" height="100" style="margin:20px;" onclick="myfunction()"/>
+	   
+	   <ul>
+	    <li><a href="C01.htm">HOME</a></li>
+		<li><a href="#news">NEWS</a></li>
+		<li><a href="#about">ABOUT</a></li>
+	  </ul>
+	   
+	  <h1>Welcome to Medical Help</h1>
+	  <hr/>
+	  <p style="color:brown;font-size:120%;text-align:center;" title="brief into">You can be in a situation where you wish 
+	  to diagnose the health problem based on symptoms.<br/>
+	    Here we help you virtually in diagnosing the health problem.</p>
+	  <a href="https://www.google.com" target="_blank">Google your problem</a>
+	  <h4>You can choose from the following options based on your symptoms.</h4>
+	  <p><strong>NOTE:</strong>This<sub>will</sub><sup>give</sup>you details 
+	  about problems.</p>
+	  <a href="Calls.htm" target="_blank">
+	  <image src="calls.jpg" alt="calls" style="width:20px;height:20px;float:right;"/>
+	  </a>
+	  <a href="mailto:xyz@example.com" style="float:right">Email Us</a>
+	  <pre> Select   any   one </pre>
+	  <h5>We have mentioned symptoms for some health issues:</h5>
+	  
+	  <form action="#" method="get">
+	    <label for="problems"> Choose</label>
+	      <select id="problems" name="problems">
+		    <option value="COVID-19">COVID-19</option>
+			<option value="Diabetes">Diabetes</option>
+			<option value="Dengue">Dengue</option>
+			<option value="Cancer">Cancer</option>
+		  </select>
+		<input type="submit" value="SUBMIT">
+	  </form>
+	  <br/>
+	  <img src="location.jpg" alt="location" usemap="#workmap" width="100"
+	  height="100">
+	  <map name="workmap">
+	  <area shape="rect" coords="10,10,90,90" alt="location" href="location.htm" target="_blank">
+	  </map>
+	  
+	  <p>We would like to know your feedback for our portal</p>
+	  <img id="mypic" src="bulboff.gif" width="100" height="180">
+	  
+	  <p>
+	  <button onclick="light(1)">Unsatisfied</button>
+	  <button onclick="light(0)">Satisfied</button>
+	  </p>
+	  
+	  <a href="HTML layout.htm">Layout</a>
+	  <h2>Reviews</h2>
+	    <form action="#" method="get">
+		  <label for="fname">First Name:</label><br/>
+		  <input type="text" id="fname" name="fname"><br>
+		  <label for="lname">Last Name:</label><br/>
+		  <input type="text" id="lanem" name="laname"><br/>
+		  <label for="tarea">Reviews:</label><br/>
+		  <textarea name="message" rows="10" cols="30"></textarea></br>
+		  <input type="submit" value="SUBMIT">
+		</form>
+	  
+	</body>
+  <html>
+  

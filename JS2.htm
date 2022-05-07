@@ -1,0 +1,43 @@
+<!Doctype html>
+  <html lang="en-US">
+    <head>
+	  <title>Complete JavaScript</title>
+	</head>
+	<body>
+	  <h1>JavaScript Practice</h1>
+	  <p id = "a01"></p>
+	  <p id = "a02"></p>
+	  <p id = "a03"></p>
+	  <p id = "a04"></p>
+	  <p id = "a05"></p>
+	  <p id = "a06"></p>
+	 
+	  
+	  <button 
+	  onclick = "document.getElementById('pix').src = 'bulbon.gif'">
+	  Turn on Light</button>
+	  <img id = "pix" src ="bulboff.gif" style = "width:100px">
+	  <button 
+	  onclick = "document.getElementById('pix').src = 'bulboff.gif'">
+	  Turn off Light</button>
+	  
+	  
+	  <script>
+	    var a1;
+	    a1 = document.getElementById("a01");
+		a1.innerHTML = "Revising JS";
+		document.getElementById("a02").innerHTML = "Another Way";
+		window.alert("This is alert window");
+		var a2 = "Welcome to India";
+		var len = a2.length;
+		document.getElementById('a03').innerHTML = len;
+		var a3 = "Hello \"Brother\" !!";
+		document.getElementById('a04').innerHTML = a3;
+		var pos = a2.indexOf("to");
+		document.getElementById("a05").innerHTML = pos;
+		var a4 = "YO! YO! HONEY SINGH";
+		document.getElementById("a06").innerHTML = a4[4];
+		
+	  </script>
+	</body>
+  </html>
